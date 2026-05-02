@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    
-    <title>IRONFIT Store</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Gym login</title>
 </head>
 <body>
-<nav class="navbar">
-    <h1>IRON <span>FIT</span> Store</h1>
-    <a href="cart.html">
-    <div class="cart-icon">
-    <i class="fa-solid fa-cart-arrow-down"></i>
-    <span id="cart-count">0</span>
-    </div>
-</a>
-</nav>
 
-<main class="store-container">
-<div class="products-header">
-    <h2>Our Equipment</h2>
-    <p>Premium gym equipment delivered to your door</p>
+    <div class="brand">
+        <h1>IRON <span>FIT</span></h1>
+    </div>
+
+<div class="login-box">
+    <h2>Gym membership Login</h2>
+
+    <label>Username</label>
+    <input type = "text" id = "username">
+   
+    <label>Password:</label>
+    <input type ="password" id="password">
+   
+
+    <button id="loginBtn">Login</button>
+    <button id="registerBtn">Register</button>
+   
+    <p id="message" class="message"></p>
 </div>
 
-<div class="products-grid"></div>
-</main>
-
-<script src="scripts/script.js"></script>
+    <script src="/scripts/login.js"></script>
 </body>
 </html>
