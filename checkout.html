@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>IRONFIT Checkout</title>
+</head>
+<body>
+<nav class="navbar">
+    <h1>IRON<span>FIT</span>Checkout</h1>
+</nav>
+
+<main class="checkout-container">
+    <div class="checkout-form">
+        <h2>Shipping Details</h2>
+        <label>Full Name</label>
+        <input type="text" id="full-name" placeholder="Enter your full name">
+        <p id="error"></p>
+
+        <label>Address</label>
+        <input type="text" id="address" placeholder="Enter your address">
+        <p id="error"></p>
+
+        <label>Phone Number</label>
+        <input type="text" id="phone" placeholder="Enter your phone number">
+        <p id="error"></p>
+
+        <button id="place-order">Place Order</button>
+    </div>
+
+    <div class="checkout-summary">
+        <h2>Order Summary</h2>
+        <div id="summary-items"></div>
+        <p id="summary-total">Total: Ksh 0</p>
+        <p id="delivery-date">Estimated Delivery:</p>
+    </div>
+</main>
+
+<script src="scripts/checkout.js"></script>
+</body>
+</html>
