@@ -1,4 +1,5 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || []
+let loggedInUser = localStorage.getItem("loggedInUser")
+let cart = JSON.parse(localStorage.getItem(`cart_${loggedInUser}`)) || []
 
 if(cart.length === 0){
     window.location.href = "index.html"
@@ -55,7 +56,7 @@ placeOrderBtn.addEventListener("click",function(){
 
         return
     }else{
-        localStorage.removeItem("cart")
+        localStorage.removeItem(`cart_${loggedInUser}`)
         alert("Order Placed Successfully")
         cart = []
         renderSummary()

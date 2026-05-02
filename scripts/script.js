@@ -36,7 +36,9 @@ let products = [{
     inStock: true
 }]
 
-let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+let loggedInUser = localStorage.getItem("loggedInUser")
+let cart = JSON.parse(localStorage.getItem(`cart_${loggedInUser}`)) || []
 
 let cartCount = document.getElementById("cart-count")
 
@@ -74,7 +76,8 @@ function renderProducts(){
         if(found ===false){
                 cart.push({...products[i],quantity:1})
             }
-        localStorage.setItem("cart",JSON.stringify(cart))
+        let loggedInUser = localStorage.getItem("loggedInUser")
+        localStorage.setItem(`cart_${loggedInUser}`, JSON.stringify(cart))
         updateCartCount()
     })
     productsGrid.appendChild(productCard);
