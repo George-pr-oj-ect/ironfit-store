@@ -40,6 +40,8 @@ let products = [{
 let loggedInUser = localStorage.getItem("loggedInUser")
 let cart = JSON.parse(localStorage.getItem(`cart_${loggedInUser}`)) || []
 
+document.getElementById("welcome-user").innerText = `Welcome, ${loggedInUser}`
+
 let cartCount = document.getElementById("cart-count")
 
 function updateCartCount(){
