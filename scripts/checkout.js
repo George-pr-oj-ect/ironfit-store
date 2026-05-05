@@ -2,7 +2,7 @@ let loggedInUser = localStorage.getItem("loggedInUser")
 let cart = JSON.parse(localStorage.getItem(`cart_${loggedInUser}`)) || []
 
 if(cart.length === 0){
-    window.location.href = "index.html"
+    window.location.href = "store.html"
 }
 
 let summaryItems = document.getElementById("summary-items")
@@ -57,7 +57,7 @@ placeOrderBtn.addEventListener("click",function(){
         return
     }else{
         localStorage.removeItem(`cart_${loggedInUser}`)
-        alert("Order Placed Successfully")
+        window.location.href = "confirmation.html"
         cart = []
         renderSummary()
         calculateTotal()

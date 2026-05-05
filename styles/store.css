@@ -217,30 +217,40 @@ a{
     height: fit-content;
 }
 
-.checkout-summary h2{
-    color: #ffffff;
-    font-size: 24px;
-}
-
 #summary-items div{
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    align-items: center;
+    padding: 8px 0;
     border-bottom: 1px solid #333;
-    color: #aaaaaa;
+}
+
+#summary-items div span:first-child{
     font-size: 14px;
+    color: #ffffff;
+}
+
+#summary-items div span:last-child{
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+.checkout-summary h2{
+    font-size: 20px;
+    color: #ffffff;
 }
 
 #summary-total{
     color: #ff6600;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 #delivery-date{
     color: #aaaaaa;
-    font-size: 14px;
+    font-size: 13px;
 }
+
 
 .product-image{
     font-size: 60px;
@@ -249,11 +259,121 @@ a{
     filter: drop-shadow(0 0 10px rgba(255, 102, 0, 0.3));
 }
 
-#summary-items div span:first-child{
-    font-size: 24px;
-}
 
 #welcome-user{
     color: #aaaaaa;
     font-size: 14px;
+}
+
+.confirmation-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px;
+}
+
+.confirmation-card{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 102, 0, 0.3);
+    border-radius: 16px;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+#confirmation-icon{
+    font-size: 60px;
+}
+
+.confirmation-card h2{
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.confirmation-subtitle{
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+#confirm-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#confirm-details p{
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+#confirm-details p:first-child{
+    color: #ff6600;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#continue-btn{
+    padding: 15px;
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#continue-btn:hover{
+    background-color: #e55c00;
+}
+
+
+@media(max-width: 768px){
+    .checkout-container{
+        flex-direction: column;
+    }
+
+    .checkout-summary{
+        width: 100%;
+    }
+
+    .cart-container{
+        flex-direction: column;
+    }
+
+    .cart-summary{
+        width: 100%;
+    }
+
+    .products-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar{
+        padding: 15px 20px;
+    }
+}
+
+@media(max-width: 480px){
+    .products-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .confirmation-card{
+        padding: 30px 20px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
 }
